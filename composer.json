@@ -1,0 +1,39 @@
+{
+    "name": "astrotomic/laravel-vcard",
+    "type": "library",
+    "description": "",
+    "keywords": [],
+    "homepage": "https://github.com/Astrotomic/laravel-vcard",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Witkowski",
+            "email": "gummibeer@astrotomic.info",
+            "homepage": "https://gummibeer.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/contracts": "^7.0 || ^8.0",
+        "illuminate/http": "^7.0 || ^8.0",
+        "illuminate/support": "^7.0 || ^8.0",
+        "illuminate/database": "^7.0 || ^8.0"
+    },
+    "require-dev": {
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Astrotomic\\CachableAttributes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Astrotomic\\CachableAttributes\\Tests\\": "tests/"
+        }
+    },
+    "prefer-stable": true
+}
