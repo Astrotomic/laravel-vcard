@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Astrotomic\\CachableAttributes\\": "src/"
+            "Astrotomic\\Vcard\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Astrotomic\\CachableAttributes\\Tests\\": "tests/"
+            "Astrotomic\\Vcard\\Tests\\": "tests/"
         }
     },
     "prefer-stable": true

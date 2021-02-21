@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utils;
+namespace Astrotomic\Vcard;
 
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Http\Response;
