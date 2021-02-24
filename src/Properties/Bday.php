@@ -6,11 +6,8 @@ use DateTimeInterface;
 
 class Bday extends Property
 {
-    protected DateTimeInterface $bday;
-
-    public function __construct(DateTimeInterface $bday)
+    public function __construct(protected DateTimeInterface $bday)
     {
-        $this->bday = $bday;
     }
 
     public function __toString(): string

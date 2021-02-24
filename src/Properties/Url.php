@@ -4,11 +4,8 @@ namespace Astrotomic\Vcard\Properties;
 
 class Url extends Property
 {
-    protected string $url;
-
-    public function __construct(string $url)
+    public function __construct(protected string $url)
     {
-        $this->url = $url;
     }
 
     public function __toString(): string

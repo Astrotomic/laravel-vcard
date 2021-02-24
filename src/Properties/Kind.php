@@ -8,11 +8,8 @@ class Kind extends Property
     public const ORGANIZATION = 'organization';
     public const GROUP = 'group';
 
-    protected string $kind;
-
-    public function __construct(string $kind)
+    public function __construct(protected string $kind)
     {
-        $this->kind = $kind;
     }
 
     public function __toString(): string

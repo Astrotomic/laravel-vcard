@@ -7,15 +7,8 @@ class Email extends Property
     public const INTERNET = 'INTERNET';
     public const WORK = 'WORK';
 
-    protected string $email;
-
-    /** @var string[] */
-    protected array $types;
-
-    public function __construct(string $email, array $types)
+    public function __construct(protected string $email, protected array $types)
     {
-        $this->email = $email;
-        $this->types = $types;
     }
 
     public function __toString(): string

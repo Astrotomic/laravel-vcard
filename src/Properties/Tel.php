@@ -9,15 +9,8 @@ class Tel extends Property
     public const HOME = 'HOME';
     public const CELL = 'CELL';
 
-    protected string $number;
-
-    /** @var string[] */
-    protected array $types;
-
-    public function __construct(string $number, array $types)
+    public function __construct(protected string $number, protected array $types)
     {
-        $this->number = $number;
-        $this->types = $types;
     }
 
     public function __toString(): string
