@@ -9,7 +9,7 @@
 [![StyleCI](https://styleci.io/repos/341030229/shield)](https://styleci.io/repos/341030229)
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-vcard.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/laravel-vcard)
 
-A simple drop-in solution for UUID support in your Eloquent models.
+A fluent builder class for vCard files.
 
 ## Installation
 
