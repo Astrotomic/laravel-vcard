@@ -1,5 +1,24 @@
 # Laravel vCard
 
+[![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-vcard.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-vcard)
+[![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-vcard.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-vcard/blob/master/LICENSE)
+[![Offset Earth](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-green?style=for-the-badge)](https://plant.treeware.earth/Astrotomic/laravel-vcard)
+[![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://www.larabelles.com/)
+
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/laravel-vcard/run-tests?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-vcard/actions?query=workflow%3Arun-tests)
+[![StyleCI](https://styleci.io/repos/341030229/shield)](https://styleci.io/repos/341030229)
+[![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-vcard.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/laravel-vcard)
+
+A simple drop-in solution for UUID support in your Eloquent models.
+
+## Installation
+
+You can install the package via composer:
+
+```bash
+composer require astrotomic/laravel-vcard
+```
+
 ## Usage
 
 ```php
