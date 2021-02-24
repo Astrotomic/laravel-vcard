@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:4.0
+N;CHARSET=UTF-8:Kuster;Manuela;;Dr.;
+FN;CHARSET=UTF-8:Dr. Manuela Kuster
+ORG;CHARSET=UTF-8:Crown Auto Parts
+TITLE;CHARSET=UTF-8:Mechanical inspector
+URL;PRIVATE:https://HalloweenHomes.de
+TEL;type=VOICE;HOME:08137 23 86 93
+ADR;CHARSET=UTF-8;HOME:;;Büsingstrasse 48;Reichertshausen;;85291;Deutschland
+END:VCARD
