@@ -46,8 +46,7 @@ class Vcard implements Responsable, Stringable
         ?string $middleName = null,
         ?string $prefix = null,
         ?string $suffix = null
-    ): self
-    {
+    ): self {
         $this->namePrefix = $prefix;
         $this->firstName = $firstName;
         $this->middleName = $middleName;
@@ -151,7 +150,7 @@ class Vcard implements Responsable, Stringable
 
     protected function hasNameParts(): bool
     {
-        return !empty(array_filter([
+        return ! empty(array_filter([
             $this->namePrefix,
             $this->firstName,
             $this->middleName,

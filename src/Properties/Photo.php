@@ -11,7 +11,7 @@ class Photo extends Property
 
     public function __construct(string $photo)
     {
-        if(!Str::startsWith($photo, 'data:image/jpeg;base64,')) {
+        if (! Str::startsWith($photo, 'data:image/jpeg;base64,')) {
             throw new InvalidArgumentException('Photo property has to be a jpeg base64 data-uri.');
         }
 
