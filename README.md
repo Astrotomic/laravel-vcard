@@ -2,7 +2,7 @@
 
 ## Usage
 
-```php 
+```php
 Vcard::make()
     ->fullName('John Adam Smith')
     ->name('Smith', 'John', 'Adam')
