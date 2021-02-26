@@ -1,8 +1,14 @@
 {
     "name": "astrotomic/laravel-vcard",
     "type": "library",
-    "description": "",
-    "keywords": [],
+    "description": "A fluent builder class for vCard files.",
+    "keywords": [
+        "laravel",
+        "vcard",
+        "vcf",
+        "contact",
+        "contacts"
+    ],
     "homepage": "https://github.com/Astrotomic/laravel-vcard",
     "license": "MIT",
     "authors": [
