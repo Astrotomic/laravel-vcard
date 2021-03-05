@@ -5,6 +5,7 @@ namespace Astrotomic\Vcard\Tests;
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
+use Astrotomic\Vcard\Properties\Member;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Vcard;
 use Carbon\Carbon;
@@ -131,6 +132,56 @@ final class VcardTest extends TestCase
             Vcard::make()
                 ->fullName('John Adam Smith')
                 ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
+        );
+    }
+
+    /** @test */
+    public function vcard_with_fn_org(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                 ->fullName('John Adam Smith')
+                 ->org('Google;GMail Team;Spam Detection Squad')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_fn_role(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                 ->fullName('John Adam Smith')
+                 ->role('Excecutive')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_fn_title(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                 ->fullName('John Adam Smith')
+                 ->title('V. P. Research and Development')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_fn_member_mail(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                 ->fullName('John Adam Smith')
+                 ->member('mailto:john.smith@company.com')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_fn_member_uuid(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                 ->fullName('John Adam Smith')
+                 ->member('urn:uuid:550e8400-e29b-11d4-a716-446655440000', Member::UUID)
         );
     }
 }
