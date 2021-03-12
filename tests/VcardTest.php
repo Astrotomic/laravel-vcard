@@ -191,7 +191,17 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                  ->fullName('John Adam Smith')
-                 ->member('urn:uuid:550e8400-e29b-11d4-a716-446655440000', Member::UUID)
+                 ->member(null, 'urn:uuid:550e8400-e29b-11d4-a716-446655440000')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_fn_member_uuid_and_mail(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                 ->fullName('John Adam Smith')
+                 ->member('mailto:john.smith@company.com', 'urn:uuid:550e8400-e29b-11d4-a716-446655440000')
         );
     }
 }

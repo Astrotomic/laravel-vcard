@@ -130,9 +130,9 @@ class Vcard implements Responsable, Stringable
         return $this;
     }
 
-    public function member(string $member, string $type = Member::MAIL): self
+    public function member(?string $mail = null, ?string $uuid = null): self
     {
-        $this->properties[] = new Member($member, $type);
+        $this->properties[] = new Member($mail, $uuid);
 
         return $this;
     }
