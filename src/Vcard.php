@@ -109,7 +109,7 @@ class Vcard implements Responsable, Stringable
         return $this;
     }
 
-    public function org(string $company, string $unit, string $team): self
+    public function org(string $company, ?string $unit = null, ?string $team = null): self
     {
         $this->properties[] = new Org($company, $unit, $team);
 

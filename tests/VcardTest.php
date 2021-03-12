@@ -151,7 +151,7 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                  ->fullName('John Adam Smith')
-                 ->org('Google', '', 'Spam Detection Squad')
+                 ->org('Google', null, 'Spam Detection Squad')
         );
     }
 
