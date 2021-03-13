@@ -46,8 +46,7 @@ Vcard::make()
     ->title('V. P. Research and Development')
     ->role('Excecutive')
     ->org('Google;GMail Team;Spam Detection Squad')
-    ->member('mailto:john.smith@company.com') // default type is 'Mail'
-    ->member('550e8400-e29b-11d4-a716-446655440000', 'Uuid') // you can use a valid uuid too
+    ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
 ;
 ```
 
@@ -70,7 +69,7 @@ PHOTO:data:image/jpeg;base64,...
 TITLE:V. P. Research and Development
 ROLE:Excecutive
 ORG:Google;GMail Team;Spam Detection Squad
-MEMBER:mailto:john.smith@company.com
+MEMBER:urn:uuid:550e8400-e29b-11d4-a716-446655440000
 REV:2021-02-25T10:30:45.000000Z
 PRODID:-//Astrotomic vCard
 END:VCARD

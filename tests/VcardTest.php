@@ -201,7 +201,7 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                  ->fullName('John Adam Smith')
-                 ->member('mailto:john.smith@company.com', 'urn:uuid:550e8400-e29b-11d4-a716-446655440000')
+                 ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
         );
     }
 }
