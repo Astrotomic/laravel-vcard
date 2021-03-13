@@ -42,7 +42,13 @@ Vcard::make()
     ->url('https://johnsmith.com')
     ->url('https://company.com')
     ->bday(Carbon::parse('1990-06-24'))
-    ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')));
+    ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
+    ->title('V. P. Research and Development')
+    ->role('Excecutive')
+    ->org('Google;GMail Team;Spam Detection Squad')
+    ->member('mailto:john.smith@company.com') // default type is 'Mail'
+    ->member('550e8400-e29b-11d4-a716-446655440000', 'Uuid') // you can use a valid uuid too
+;
 ```
 
 ```vcard
@@ -61,6 +67,10 @@ URL:https://johnsmith.com
 URL:https://company.com
 BDAY:1990-06-24
 PHOTO:data:image/jpeg;base64,...
+TITLE:V. P. Research and Development
+ROLE:Excecutive
+ORG:Google;GMail Team;Spam Detection Squad
+MEMBER:mailto:john.smith@company.com
 REV:2021-02-25T10:30:45.000000Z
 PRODID:-//Astrotomic vCard
 END:VCARD
