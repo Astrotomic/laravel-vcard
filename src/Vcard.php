@@ -7,8 +7,12 @@ use Astrotomic\Vcard\Properties\Bday;
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
+use Astrotomic\Vcard\Properties\Member;
+use Astrotomic\Vcard\Properties\Org;
 use Astrotomic\Vcard\Properties\Photo;
+use Astrotomic\Vcard\Properties\Role;
 use Astrotomic\Vcard\Properties\Tel;
+use Astrotomic\Vcard\Properties\Title;
 use Astrotomic\Vcard\Properties\Url;
 use Carbon\Carbon;
 use DateTimeInterface;
@@ -104,6 +108,34 @@ class Vcard implements Responsable, Stringable
     public function gender(string $gender): self
     {
         $this->properties[] = new Gender($gender);
+
+        return $this;
+    }
+
+    public function org(string $company, ?string $unit = null, ?string $team = null): self
+    {
+        $this->properties[] = new Org($company, $unit, $team);
+
+        return $this;
+    }
+
+    public function title(string $title): self
+    {
+        $this->properties[] = new Title($title);
+
+        return $this;
+    }
+
+    public function role(string $role): self
+    {
+        $this->properties[] = new Role($role);
+
+        return $this;
+    }
+
+    public function member(?string $mail = null, ?string $uuid = null): self
+    {
+        $this->properties[] = new Member($mail, $uuid);
 
         return $this;
     }
