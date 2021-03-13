@@ -158,7 +158,7 @@ class Vcard implements Responsable, Stringable
     {
         $content = strval($this);
 
-        $filename = Str::of($this->name)->slug('_')->append('.vcf');
+        $filename = Str::of($this->getFullName())->slug('_')->append('.vcf');
 
         return new Response($content, 200, [
             'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
