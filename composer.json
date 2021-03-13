@@ -21,6 +21,7 @@
     ],
     "require": {
         "php": "^8.0",
+        "astrotomic/php-conditional-proxy": "^0.2.1",
         "illuminate/contracts": "^8.0",
         "illuminate/http": "^8.0",
         "illuminate/support": "^8.0"

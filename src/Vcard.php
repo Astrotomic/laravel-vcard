@@ -2,6 +2,7 @@
 
 namespace Astrotomic\Vcard;
 
+use Astrotomic\ConditionalProxy\HasConditionalCalls;
 use Astrotomic\Vcard\Properties\Bday;
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
@@ -19,6 +20,8 @@ use Symfony\Component\HttpFoundation\HeaderUtils;
 
 class Vcard implements Responsable, Stringable
 {
+    use HasConditionalCalls;
+
     protected ?string $fullName = null;
     protected ?string $namePrefix = null;
     protected ?string $firstName = null;
