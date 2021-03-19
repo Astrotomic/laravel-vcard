@@ -42,6 +42,7 @@ Vcard::make()
     ->url('https://johnsmith.com')
     ->url('https://company.com')
     ->bday(Carbon::parse('1990-06-24'))
+    ->adr('','','1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA')
     ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
     ->title('V. P. Research and Development')
     ->role('Excecutive')
@@ -65,6 +66,7 @@ TEL;TYPE=CELL;TYPE=VOICE:+0123456789
 URL:https://johnsmith.com
 URL:https://company.com
 BDAY:1990-06-24
+ADR;TYPE=WORK:;;1600 Pennsylvania Ave NW;Washington;DC;20500-0003;USA
 PHOTO:data:image/jpeg;base64,...
 TITLE:V. P. Research and Development
 ROLE:Excecutive
