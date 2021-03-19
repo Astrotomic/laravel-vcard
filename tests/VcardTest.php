@@ -31,7 +31,7 @@ final class VcardTest extends TestCase
                 ->url('https://company.com')
                 ->bday(Carbon::parse('1990-06-24'))
                 ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
-                ->adr('','','1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA')
+                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA')
         );
     }
 
@@ -213,7 +213,7 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                 ->fullName('John Adam Smith')
-                ->adr('','','1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA', [Adr::WORK])
+                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA', [Adr::WORK])
         );
     }
 
@@ -223,9 +223,9 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                 ->fullName('John Adam Smith')
-                ->adr('','','1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA', [Adr::WORK, Adr::PREF])
-                ->adr('','','1640 Riverside Drive', ' Hill Valley', 'CA', '', 'USA', [Adr::HOME])
+                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA',
+                    [Adr::WORK, Adr::PREF])
+                ->adr('', '', '1640 Riverside Drive', ' Hill Valley', 'CA', '', 'USA', [Adr::HOME])
         );
     }
-
 }
