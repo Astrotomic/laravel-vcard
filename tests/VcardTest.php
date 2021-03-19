@@ -6,7 +6,6 @@ use Astrotomic\Vcard\Properties\Adr;
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
-use Astrotomic\Vcard\Properties\Member;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Vcard;
 use Carbon\Carbon;
