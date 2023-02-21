@@ -3,6 +3,7 @@
 namespace Astrotomic\Vcard;
 
 use Astrotomic\ConditionalProxy\HasConditionalCalls;
+use Astrotomic\Vcard\Properties\Adr;
 use Astrotomic\Vcard\Properties\Bday;
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
@@ -136,6 +137,30 @@ class Vcard implements Responsable, Stringable
     public function member(?string $mail = null, ?string $uuid = null): self
     {
         $this->properties[] = new Member($mail, $uuid);
+
+        return $this;
+    }
+
+    public function adr(
+        ?string $poBox = null,
+        ?string $extendedAddress = null,
+        ?string $streetAddress = null,
+        ?string $locality = null,
+        ?string $region = null,
+        ?string $postalCode = null,
+        ?string $countryName = null,
+        array $types = [Adr::WORK]
+    ): self {
+        $this->properties[] = new Adr(
+            $poBox,
+            $extendedAddress,
+            $streetAddress,
+            $locality,
+            $region,
+            $postalCode,
+            $countryName,
+            $types
+        );
 
         return $this;
     }
