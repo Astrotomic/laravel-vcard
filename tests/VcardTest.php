@@ -222,8 +222,7 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                 ->fullName('John Adam Smith')
-                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA',
-                    [Adr::WORK, Adr::PREF])
+                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA', [Adr::WORK, Adr::PREF])
                 ->adr('', '', '1640 Riverside Drive', ' Hill Valley', 'CA', '', 'USA', [Adr::HOME])
         );
     }
