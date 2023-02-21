@@ -23,7 +23,7 @@ class Adr extends Property
     public function __toString(): string
     {
         $types = implode(';', array_map(
-            fn(string $type): string => "TYPE={$type}",
+            fn (string $type): string => "TYPE={$type}",
             $this->types
         ));
 
