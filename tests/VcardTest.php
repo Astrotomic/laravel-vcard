@@ -2,6 +2,7 @@
 
 namespace Astrotomic\Vcard\Tests;
 
+use Astrotomic\Vcard\Properties\Adr;
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
@@ -29,6 +30,7 @@ final class VcardTest extends TestCase
                 ->url('https://company.com')
                 ->bday(Carbon::parse('1990-06-24'))
                 ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
+                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA')
         );
     }
 
@@ -201,6 +203,28 @@ final class VcardTest extends TestCase
             Vcard::make()
                  ->fullName('John Adam Smith')
                  ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_work_address(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA', [Adr::WORK])
+        );
+    }
+
+    /** @test */
+    public function vcard_with_work_and_home_address(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA',
+                    [Adr::WORK, Adr::PREF])
+                ->adr('', '', '1640 Riverside Drive', ' Hill Valley', 'CA', '', 'USA', [Adr::HOME])
         );
     }
 }
