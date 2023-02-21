@@ -13,9 +13,9 @@ class Member extends Property
 
     public function __toString(): string
     {
-        if($this->uuid) {
+        if ($this->uuid) {
             $member = Str::start($this->uuid, 'urn:uuid:');
-        } elseif($this->email) {
+        } elseif ($this->email) {
             $member = Str::start($this->email, 'mailto:');
         } else {
             throw new InvalidArgumentException('You have to pass at least one member identifier.');

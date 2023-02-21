@@ -9,7 +9,7 @@ class Gender extends Property
     public const OTHER = 'O';
     public const NONE = 'N';
     public const UNKNOWN = 'U';
-    
+
     public function __construct(protected string $gender)
     {
     }
