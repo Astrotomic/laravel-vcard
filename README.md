@@ -45,7 +45,7 @@ Vcard::make()
     ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
     ->title('V. P. Research and Development')
     ->role('Excecutive')
-    ->org('Google;GMail Team;Spam Detection Squad')
+    ->org('Google', 'GMail Team', 'Spam Detection Squad')
     ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
 ;
 ```
