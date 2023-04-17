@@ -9,13 +9,14 @@ use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
 use Astrotomic\Vcard\Properties\Member;
+use Astrotomic\Vcard\Properties\Note;
 use Astrotomic\Vcard\Properties\Org;
 use Astrotomic\Vcard\Properties\Photo;
 use Astrotomic\Vcard\Properties\Role;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Properties\Title;
 use Astrotomic\Vcard\Properties\Url;
-use Astrotomic\Vcard\Properties\Note;
+
 use Carbon\Carbon;
 use DateTimeInterface;
 use Illuminate\Contracts\Support\Responsable;
