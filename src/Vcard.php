@@ -16,7 +16,6 @@ use Astrotomic\Vcard\Properties\Role;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Properties\Title;
 use Astrotomic\Vcard\Properties\Url;
-
 use Carbon\Carbon;
 use DateTimeInterface;
 use Illuminate\Contracts\Support\Responsable;
