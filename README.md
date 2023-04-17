@@ -48,6 +48,7 @@ Vcard::make()
     ->role('Excecutive')
     ->org('Google', 'GMail Team', 'Spam Detection Squad')
     ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
+    ->note('Hello world')
 ;
 ```
 
