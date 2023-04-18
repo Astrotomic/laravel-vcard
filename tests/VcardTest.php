@@ -237,7 +237,7 @@ final class VcardTest extends TestCase
                 ->note('Hello single line')
         );
     }
-    
+
     /** @test */
     public function vcard_with_multiline_note(): void
     {
