@@ -227,4 +227,24 @@ final class VcardTest extends TestCase
                 ->adr('', '', '1640 Riverside Drive', ' Hill Valley', 'CA', '', 'USA', [Adr::HOME])
         );
     }
+
+    /** @test */
+    public function vcard_with_single_note(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->note('Hello single line')
+        );
+    }
+   
+    /** @test */
+    public function vcard_with_multiline_note(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->note('Hello \n multiline line')
+        );
+    }
 }
