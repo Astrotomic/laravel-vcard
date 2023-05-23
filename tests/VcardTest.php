@@ -31,6 +31,7 @@ final class VcardTest extends TestCase
                 ->bday(Carbon::parse('1990-06-24'))
                 ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
                 ->adr('', '', '1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA')
+                ->source('https://www.example.org')
         );
     }
 
