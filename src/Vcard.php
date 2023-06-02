@@ -196,7 +196,7 @@ class Vcard implements Responsable, Stringable
         return new Response($content, 200, [
             'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
             'Content-Type' => 'text/vcard',
-            'Content-Length' => Str::length($content),
+            'Content-Length' => strlen($content),
             'Content-Disposition' => HeaderUtils::makeDisposition(
                 HeaderUtils::DISPOSITION_ATTACHMENT,
                 $filename,
