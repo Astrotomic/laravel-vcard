@@ -10,6 +10,6 @@ class Photo extends Property
 
     public function __toString(): string
     {
-        return "PHOTO:{$this->photo}";
+        return "PHOTO;{$this->photo}";
     }
 }

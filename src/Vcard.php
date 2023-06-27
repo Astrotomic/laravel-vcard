@@ -13,6 +13,7 @@ use Astrotomic\Vcard\Properties\Note;
 use Astrotomic\Vcard\Properties\Org;
 use Astrotomic\Vcard\Properties\Photo;
 use Astrotomic\Vcard\Properties\Role;
+use Astrotomic\Vcard\Properties\Source;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Properties\Title;
 use Astrotomic\Vcard\Properties\Url;
@@ -166,9 +167,17 @@ class Vcard implements Responsable, Stringable
         return $this;
     }
 
+
     public function note(string $note): self
     {
         $this->properties[] = new Note($note);
+
+        return $this;
+    }
+
+    public function source(string $source): self
+    {
+        $this->properties[] = new Source($source);
 
         return $this;
     }
