@@ -230,6 +230,16 @@ final class VcardTest extends TestCase
     }
 
     /** @test */
+    public function vcard_to_response_header(): void
+    {
+        $response = Vcard::make()
+            ->fullName('Jöhn Ädäm Smïth')->toResponse(null);
+
+        $this->assertEquals($response->headers->get('content-length'), 129);
+        $this->assertEquals($response->headers->get('Content-Disposition'), 'attachment; filename=john_adam_smith.vcf');
+    }
+      
+    /** @test */
     public function vcard_with_single_note(): void
     {
         $this->assertMatchesVcardSnapshot(
