@@ -48,6 +48,7 @@ Vcard::make()
     ->role('Excecutive')
     ->org('Google', 'GMail Team', 'Spam Detection Squad')
     ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
+    ->note('Hello world')
 ;
 ```
 
@@ -67,7 +68,7 @@ URL:https://johnsmith.com
 URL:https://company.com
 BDAY:1990-06-24
 ADR;TYPE=WORK:;;1600 Pennsylvania Ave NW;Washington;DC;20500-0003;USA
-PHOTO:data:image/jpeg;base64,...
+PHOTO;data:image/jpeg;base64,...
 TITLE:V. P. Research and Development
 ROLE:Excecutive
 ORG:Google;GMail Team;Spam Detection Squad

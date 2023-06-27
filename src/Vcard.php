@@ -9,6 +9,7 @@ use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
 use Astrotomic\Vcard\Properties\Member;
+use Astrotomic\Vcard\Properties\Note;
 use Astrotomic\Vcard\Properties\Org;
 use Astrotomic\Vcard\Properties\Photo;
 use Astrotomic\Vcard\Properties\Role;
@@ -162,6 +163,13 @@ class Vcard implements Responsable, Stringable
             $countryName,
             $types
         );
+
+        return $this;
+    }
+
+    public function note(string $note): self
+    {
+        $this->properties[] = new Note($note);
 
         return $this;
     }

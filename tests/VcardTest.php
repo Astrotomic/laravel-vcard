@@ -238,4 +238,24 @@ final class VcardTest extends TestCase
         $this->assertEquals($response->headers->get('content-length'), 129);
         $this->assertEquals($response->headers->get('Content-Disposition'), 'attachment; filename=john_adam_smith.vcf');
     }
+      
+    /** @test */
+    public function vcard_with_single_note(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->note('Hello single-line')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_multiline_note(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->note('Hello'.PHP_EOL.'multi-line')
+        );
+    }
 }
