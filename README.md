@@ -67,7 +67,7 @@ URL:https://johnsmith.com
 URL:https://company.com
 BDAY:1990-06-24
 ADR;TYPE=WORK:;;1600 Pennsylvania Ave NW;Washington;DC;20500-0003;USA
-PHOTO:data:image/jpeg;base64,...
+PHOTO;data:image/jpeg;base64,...
 TITLE:V. P. Research and Development
 ROLE:Excecutive
 ORG:Google;GMail Team;Spam Detection Squad
