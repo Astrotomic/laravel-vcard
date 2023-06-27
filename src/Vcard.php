@@ -167,7 +167,6 @@ class Vcard implements Responsable, Stringable
         return $this;
     }
 
-
     public function note(string $note): self
     {
         $this->properties[] = new Note($note);

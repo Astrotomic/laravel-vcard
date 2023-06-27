@@ -235,7 +235,7 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                 ->fullName('John Adam Smith')
-                ->note('Hello single line')
+                ->note('Hello single-line')
         );
     }
 
@@ -245,7 +245,7 @@ final class VcardTest extends TestCase
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
                 ->fullName('John Adam Smith')
-                ->note('Hello \n multiline line')
+                ->note('Hello'.PHP_EOL.'multi-line')
         );
     }
 }
