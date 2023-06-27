@@ -5,8 +5,11 @@ namespace Astrotomic\Vcard\Properties;
 class Tel extends Property
 {
     public const VOICE = 'VOICE';
+
     public const WORK = 'WORK';
+
     public const HOME = 'HOME';
+
     public const CELL = 'CELL';
 
     public function __construct(protected string $number, protected array $types)

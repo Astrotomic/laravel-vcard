@@ -30,10 +30,15 @@ class Vcard implements Responsable, Stringable
     use HasConditionalCalls;
 
     protected ?string $fullName = null;
+
     protected ?string $namePrefix = null;
+
     protected ?string $firstName = null;
+
     protected ?string $middleName = null;
+
     protected ?string $lastName = null;
+
     protected ?string $nameSuffix = null;
 
     protected array $properties = [];

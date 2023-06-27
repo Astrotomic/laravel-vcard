@@ -142,8 +142,8 @@ final class VcardTest extends TestCase
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
-                 ->fullName('John Adam Smith')
-                 ->org('Google', 'GMail Team', 'Spam Detection Squad')
+                ->fullName('John Adam Smith')
+                ->org('Google', 'GMail Team', 'Spam Detection Squad')
         );
     }
 
@@ -152,8 +152,8 @@ final class VcardTest extends TestCase
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
-                 ->fullName('John Adam Smith')
-                 ->org('Google', null, 'Spam Detection Squad')
+                ->fullName('John Adam Smith')
+                ->org('Google', null, 'Spam Detection Squad')
         );
     }
 
@@ -162,8 +162,8 @@ final class VcardTest extends TestCase
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
-                 ->fullName('John Adam Smith')
-                 ->role('Excecutive')
+                ->fullName('John Adam Smith')
+                ->role('Excecutive')
         );
     }
 
@@ -172,8 +172,8 @@ final class VcardTest extends TestCase
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
-                 ->fullName('John Adam Smith')
-                 ->title('V. P. Research and Development')
+                ->fullName('John Adam Smith')
+                ->title('V. P. Research and Development')
         );
     }
 
@@ -182,8 +182,8 @@ final class VcardTest extends TestCase
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
-                 ->fullName('John Adam Smith')
-                 ->member('mailto:john.smith@company.com')
+                ->fullName('John Adam Smith')
+                ->member('mailto:john.smith@company.com')
         );
     }
 
@@ -192,8 +192,8 @@ final class VcardTest extends TestCase
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
-                 ->fullName('John Adam Smith')
-                 ->member(null, 'urn:uuid:550e8400-e29b-11d4-a716-446655440000')
+                ->fullName('John Adam Smith')
+                ->member(null, 'urn:uuid:550e8400-e29b-11d4-a716-446655440000')
         );
     }
 
@@ -202,8 +202,8 @@ final class VcardTest extends TestCase
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
-                 ->fullName('John Adam Smith')
-                 ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
+                ->fullName('John Adam Smith')
+                ->member('john.smith@company.com', '550e8400-e29b-11d4-a716-446655440000')
         );
     }
 
@@ -238,7 +238,7 @@ final class VcardTest extends TestCase
         $this->assertEquals($response->headers->get('content-length'), 129);
         $this->assertEquals($response->headers->get('Content-Disposition'), 'attachment; filename=john_adam_smith.vcf');
     }
-      
+
     /** @test */
     public function vcard_with_single_note(): void
     {

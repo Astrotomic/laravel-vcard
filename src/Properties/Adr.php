@@ -5,7 +5,9 @@ namespace Astrotomic\Vcard\Properties;
 class Adr extends Property
 {
     public const HOME = 'HOME';
+
     public const WORK = 'WORK';
+
     public const PREF = 'PREF';
 
     public function __construct(

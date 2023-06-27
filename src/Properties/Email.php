@@ -5,6 +5,7 @@ namespace Astrotomic\Vcard\Properties;
 class Email extends Property
 {
     public const INTERNET = 'INTERNET';
+
     public const WORK = 'WORK';
 
     public function __construct(protected string $email, protected array $types)
