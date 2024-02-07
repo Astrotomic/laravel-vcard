@@ -1,6 +1,6 @@
 {
-    "name": "astrotomic/laravel-vcard",
-    "description": "A fluent builder class for vCard files.",
+    "name": "kepsondiaz/laravel-vcard",
+    "description": "A fluent builder class for vCard files. Work for android and iOS devise",
     "license": "MIT",
     "type": "library",
     "keywords": [
@@ -12,13 +12,12 @@
     ],
     "authors": [
         {
-            "name": "Tom Witkowski",
-            "email": "gummibeer@astrotomic.info",
-            "homepage": "https://gummibeer.de",
+            "name": "Kepson Diaz",
+            "email": "kherabadiaby328@gmail.com",
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/Astrotomic/laravel-vcard",
+    "homepage": "https://github.com/Kepsondiaz/laravel-vcard",
     "require": {
         "php": "^8.0",
         "astrotomic/php-conditional-proxy": "^0.2.1",
