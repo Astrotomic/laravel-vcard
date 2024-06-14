@@ -16,7 +16,7 @@ A fluent builder class for vCard files.
 You can install the package via composer:
 
 ```bash
-composer require astrotomic/laravel-vcard
+composer require kepsondiaz/laravel-vcard
 ```
 
 ## Usage
