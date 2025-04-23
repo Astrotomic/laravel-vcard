@@ -14,9 +14,7 @@ class Gender extends Property
 
     public const UNKNOWN = 'U';
 
-    public function __construct(protected string $gender)
-    {
-    }
+    public function __construct(protected string $gender) {}
 
     public function __toString(): string
     {

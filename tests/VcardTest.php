@@ -65,7 +65,7 @@ final class VcardTest extends TestCase
     }
 
     /** @test */
-    public function vcard_with_fn_email_workEmail(): void
+    public function vcard_with_fn_email_work_email(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -86,7 +86,7 @@ final class VcardTest extends TestCase
     }
 
     /** @test */
-    public function vcard_with_fn_tel_workTel(): void
+    public function vcard_with_fn_tel_work_tel(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()

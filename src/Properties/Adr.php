@@ -19,8 +19,7 @@ class Adr extends Property
         protected string $postalCode,
         protected string $countryName,
         protected array $types
-    ) {
-    }
+    ) {}
 
     public function __toString(): string
     {

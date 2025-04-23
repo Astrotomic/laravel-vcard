@@ -26,6 +26,6 @@ abstract class TestCase extends OrchestraTestCase
         $this->assertStringStartsWith('BEGIN:VCARD', $vcard);
         $this->assertStringEndsWith('END:VCARD', $vcard);
 
-        $this->assertMatchesSnapshot($actual, new VcardDriver());
+        $this->assertMatchesSnapshot($actual, new VcardDriver);
     }
 }

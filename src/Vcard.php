@@ -45,7 +45,7 @@ class Vcard implements Responsable, Stringable
 
     public static function make(): self
     {
-        return new static();
+        return new static;
     }
 
     public function fullName(?string $fullName): self

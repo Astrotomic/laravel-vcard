@@ -10,9 +10,7 @@ class Kind extends Property
 
     public const GROUP = 'group';
 
-    public function __construct(protected string $kind)
-    {
-    }
+    public function __construct(protected string $kind) {}
 
     public function __toString(): string
     {

@@ -12,9 +12,7 @@ class Tel extends Property
 
     public const CELL = 'CELL';
 
-    public function __construct(protected string $number, protected array $types)
-    {
-    }
+    public function __construct(protected string $number, protected array $types) {}
 
     public function __toString(): string
     {

@@ -8,9 +8,7 @@ class Email extends Property
 
     public const WORK = 'WORK';
 
-    public function __construct(protected string $email, protected array $types)
-    {
-    }
+    public function __construct(protected string $email, protected array $types) {}
 
     public function __toString(): string
     {
