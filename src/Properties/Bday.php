@@ -6,9 +6,7 @@ use DateTimeInterface;
 
 class Bday extends Property
 {
-    public function __construct(protected DateTimeInterface $bday)
-    {
-    }
+    public function __construct(protected DateTimeInterface $bday) {}
 
     public function __toString(): string
     {
