@@ -1,11 +1,11 @@
 # Laravel vCard
 
-[![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-vcard.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-vcard)
-[![MIT License](https://img.shields.io/github/license/astrotomic/laravel-vcard.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-vcard/blob/master/LICENSE)
+[![Latest Version](http://img.shields.io/packagist/v/reyemtech/laravel-vcard.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/reyemtech/laravel-vcard)
+[![MIT License](https://img.shields.io/github/license/reyemtech/laravel-vcard.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-vcard/blob/master/LICENSE)
 
 <!-- [![phpunit](https://img.shields.io/github/workflow/status/Astrotomic/laravel-vcard/phpunit?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-vcard/actions?query=workflow%3Aphpunit) -->
 <!-- [![pint](https://img.shields.io/github/workflow/status/Astrotomic/laravel-vcard/pint?style=flat-square&logoColor=white&logo=github&label=CS)](https://github.com/Astrotomic/laravel-vcard/actions?query=workflow%3Apint) -->
-[![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-vcard.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/laravel-vcard)
+[![Total Downloads](https://img.shields.io/packagist/dt/reyemtech/laravel-vcard.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/reyemtech/laravel-vcard)
 
 A fluent builder class for vCard files.
 
@@ -14,7 +14,7 @@ A fluent builder class for vCard files.
 You can install the package via composer:
 
 ```bash
-composer require astrotomic/laravel-vcard
+composer require reyemtech/laravel-vcard
 ```
 
 ## Usage
