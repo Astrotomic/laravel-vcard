@@ -1,12 +1,10 @@
 # Laravel vCard
 
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-vcard.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-vcard)
-[![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-vcard.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-vcard/blob/master/LICENSE)
-[![Offset Earth](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-green?style=for-the-badge)](https://plant.treeware.earth/Astrotomic/laravel-vcard)
-[![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://www.larabelles.com/)
+[![MIT License](https://img.shields.io/github/license/astrotomic/laravel-vcard.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-vcard/blob/master/LICENSE)
 
-[![phpunit](https://img.shields.io/github/workflow/status/Astrotomic/laravel-vcard/phpunit?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-vcard/actions?query=workflow%3Aphpunit)
-[![pint](https://img.shields.io/github/workflow/status/Astrotomic/laravel-vcard/pint?style=flat-square&logoColor=white&logo=github&label=CS)](https://github.com/Astrotomic/laravel-vcard/actions?query=workflow%3Apint)
+<!-- [![phpunit](https://img.shields.io/github/workflow/status/Astrotomic/laravel-vcard/phpunit?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-vcard/actions?query=workflow%3Aphpunit) -->
+<!-- [![pint](https://img.shields.io/github/workflow/status/Astrotomic/laravel-vcard/pint?style=flat-square&logoColor=white&logo=github&label=CS)](https://github.com/Astrotomic/laravel-vcard/actions?query=workflow%3Apint) -->
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-vcard.svg?label=Downloads&style=flat-square)](https://packagist.org/packages/astrotomic/laravel-vcard)
 
 A fluent builder class for vCard files.
@@ -25,6 +23,7 @@ composer require astrotomic/laravel-vcard
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
+use Astrotomic\Vcard\Properties\SocialProfile;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Vcard;
 use Carbon\Carbon;
@@ -41,6 +40,9 @@ Vcard::make()
     ->tel('+0123456789', [Tel::CELL, Tel::VOICE])
     ->url('https://johnsmith.com')
     ->url('https://company.com')
+    ->social(SocialProfile::TWITTER, 'https://www.twitter.com/johnsmith')
+    ->social(SocialProfile::FACEBOOK, 'https://www.facebook.com/johnsmith')
+    ->social(SocialProfile::LINKEDIN, 'https://www.linkedin.com/in/johnsmith')
     ->bday(Carbon::parse('1990-06-24'))
     ->adr('','','1600 Pennsylvania Ave NW', 'Washington', 'DC', '20500-0003', 'USA')
     ->photo('data:image/jpeg;base64,'.base64_encode(file_get_contents(__DIR__.'/stubs/photo.jpg')))
@@ -66,6 +68,9 @@ TEL;TYPE=WORK;TYPE=VOICE:+0987654321
 TEL;TYPE=CELL;TYPE=VOICE:+0123456789
 URL:https://johnsmith.com
 URL:https://company.com
+X-SOCIALPROFILE:type=twitter:https://www.twitter.com/johnsmith
+X-SOCIALPROFILE:type=facebook:https://www.facebook.com/johnsmith
+X-SOCIALPROFILE:type=linkedin:https://www.linkedin.com/in/johnsmith
 BDAY:1990-06-24
 ADR;TYPE=WORK:;;1600 Pennsylvania Ave NW;Washington;DC;20500-0003;USA
 PHOTO;data:image/jpeg;base64,...

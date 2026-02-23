@@ -13,6 +13,7 @@ use Astrotomic\Vcard\Properties\Note;
 use Astrotomic\Vcard\Properties\Org;
 use Astrotomic\Vcard\Properties\Photo;
 use Astrotomic\Vcard\Properties\Role;
+use Astrotomic\Vcard\Properties\SocialProfile;
 use Astrotomic\Vcard\Properties\Source;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Properties\Title;
@@ -88,6 +89,13 @@ class Vcard implements Responsable, Stringable
     public function url(string $url): self
     {
         $this->properties[] = new Url($url);
+
+        return $this;
+    }
+
+    public function social(string $type, string $url): self
+    {
+        $this->properties[] = new SocialProfile($type, $url);
 
         return $this;
     }
