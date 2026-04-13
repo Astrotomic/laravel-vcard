@@ -6,6 +6,7 @@ use Astrotomic\Vcard\Properties\Adr;
 use Astrotomic\Vcard\Properties\Email;
 use Astrotomic\Vcard\Properties\Gender;
 use Astrotomic\Vcard\Properties\Kind;
+use Astrotomic\Vcard\Properties\SocialProfile;
 use Astrotomic\Vcard\Properties\Tel;
 use Astrotomic\Vcard\Vcard;
 use Carbon\Carbon;
@@ -237,6 +238,28 @@ final class VcardTest extends TestCase
 
         $this->assertEquals($response->headers->get('content-length'), 129);
         $this->assertEquals($response->headers->get('Content-Disposition'), 'attachment; filename=john_adam_smith.vcf');
+    }
+
+    /** @test */
+    public function vcard_with_fn_social(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->social(SocialProfile::TWITTER, 'https://www.twitter.com/johnsmith')
+        );
+    }
+
+    /** @test */
+    public function vcard_with_fn_socials(): void
+    {
+        $this->assertMatchesVcardSnapshot(
+            Vcard::make()
+                ->fullName('John Adam Smith')
+                ->social(SocialProfile::TWITTER, 'https://www.twitter.com/johnsmith')
+                ->social(SocialProfile::FACEBOOK, 'https://www.facebook.com/johnsmith')
+                ->social(SocialProfile::LINKEDIN, 'https://www.linkedin.com/in/johnsmith')
+        );
     }
 
     /** @test */
