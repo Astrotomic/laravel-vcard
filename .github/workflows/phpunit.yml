@@ -3,6 +3,9 @@ name: phpunit
 on:
   push:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository

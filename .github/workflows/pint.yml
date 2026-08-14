@@ -3,6 +3,9 @@ name: pint
 on:
   push:
 
+permissions:
+  contents: read
+
 jobs:
   phpcs:
     runs-on: ubuntu-latest
