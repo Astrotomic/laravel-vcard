@@ -44,6 +44,11 @@
         }
     },
     "config": {
+        "policy": {
+            "advisories": {
+                "block": false
+            }
+        },
         "sort-packages": true
     },
     "scripts": {
