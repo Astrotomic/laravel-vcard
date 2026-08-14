@@ -12,8 +12,7 @@ use Carbon\Carbon;
 
 final class VcardTest extends TestCase
 {
-    /** @test */
-    public function vcard_full(): void
+    public function test_vcard_full(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -35,8 +34,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn(): void
+    public function test_vcard_with_fn(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -44,8 +42,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_n(): void
+    public function test_vcard_with_fn_n(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -54,8 +51,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_email(): void
+    public function test_vcard_with_fn_email(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -64,8 +60,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_email_work_email(): void
+    public function test_vcard_with_fn_email_work_email(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -75,8 +70,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_tel(): void
+    public function test_vcard_with_fn_tel(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -85,8 +79,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_tel_work_tel(): void
+    public function test_vcard_with_fn_tel_work_tel(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -96,8 +89,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_url(): void
+    public function test_vcard_with_fn_url(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -106,8 +98,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_urls(): void
+    public function test_vcard_with_fn_urls(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -117,8 +108,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_bday(): void
+    public function test_vcard_with_fn_bday(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -127,8 +117,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_photo(): void
+    public function test_vcard_with_fn_photo(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -137,8 +126,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_org(): void
+    public function test_vcard_with_fn_org(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -147,8 +135,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_org_missing_unit(): void
+    public function test_vcard_with_fn_org_missing_unit(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -157,8 +144,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_role(): void
+    public function test_vcard_with_fn_role(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -167,8 +153,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_title(): void
+    public function test_vcard_with_fn_title(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -177,8 +162,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_member_mail(): void
+    public function test_vcard_with_fn_member_mail(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -187,8 +171,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_member_uuid(): void
+    public function test_vcard_with_fn_member_uuid(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -197,8 +180,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_fn_member_uuid_and_mail(): void
+    public function test_vcard_with_fn_member_uuid_and_mail(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -207,8 +189,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_work_address(): void
+    public function test_vcard_with_work_address(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -217,8 +198,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_work_and_home_address(): void
+    public function test_vcard_with_work_and_home_address(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -229,8 +209,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_to_response_header(): void
+    public function test_vcard_to_response_header(): void
     {
         $response = Vcard::make()
             ->fullName('Jöhn Ädäm Smïth')->toResponse(null);
@@ -239,8 +218,7 @@ final class VcardTest extends TestCase
         $this->assertEquals($response->headers->get('Content-Disposition'), 'attachment; filename=john_adam_smith.vcf');
     }
 
-    /** @test */
-    public function vcard_with_single_note(): void
+    public function test_vcard_with_single_note(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
@@ -249,8 +227,7 @@ final class VcardTest extends TestCase
         );
     }
 
-    /** @test */
-    public function vcard_with_multiline_note(): void
+    public function test_vcard_with_multiline_note(): void
     {
         $this->assertMatchesVcardSnapshot(
             Vcard::make()
