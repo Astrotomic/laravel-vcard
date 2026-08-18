@@ -190,7 +190,7 @@ class Vcard implements Responsable, Stringable
     {
         return collect([
             'BEGIN:VCARD',
-            'VERSION:4.0',
+            'VERSION:3.0',
             "FN;CHARSET=UTF-8:{$this->getFullName()}",
             $this->hasNameParts() ? "N;CHARSET=UTF-8:{$this->lastName};{$this->firstName};{$this->middleName};{$this->namePrefix};{$this->nameSuffix}" : null,
             array_map('strval', $this->properties),
